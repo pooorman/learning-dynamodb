@@ -18,7 +18,7 @@ public class DynamodbSample {
     public static void main(String[] args) throws Exception {
         BasicAWSCredentials awsCreds = new BasicAWSCredentials("local_db", "local_db");
         AmazonDynamoDBClient client = new AmazonDynamoDBClient(awsCreds);
-        client.setEndpoint("http://localhost:8000");
+        client.setEndpoint("http://localhost:8088");
         dynamoDB = new DynamoDB(client);
 
         PutItemOutcome outcome = putData();
